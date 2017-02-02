@@ -1,0 +1,17 @@
+version: '2'
+services:
+  elasticsearch:
+    #image: elasticsearch:5.1
+    build: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - ES_JAVA_OPTS=-Xms512M -Xmx512M
+  #kibana:
+    #image: kibana:5.1
+  #  build: kibana
+  #  links:
+  #    - elasticsearch
+  #  ports:
+  #    - "5601:5601"
