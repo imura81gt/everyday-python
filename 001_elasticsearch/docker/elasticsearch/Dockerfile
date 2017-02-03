@@ -8,6 +8,6 @@ RUN bin/elasticsearch-plugin install analysis-phonetic
 EXPOSE 9200
 
 #ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["elasticsearch"]
+CMD ["elasticsearch", "-Etransport.host=0.0.0.0"]
 
 
